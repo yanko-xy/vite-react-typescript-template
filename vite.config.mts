@@ -53,7 +53,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         ],
         // 处理 eslint
         eslintrc: {
-          enabled: false,
+          enabled: true,
         },
         // 动态自动引入
         resolvers: [
