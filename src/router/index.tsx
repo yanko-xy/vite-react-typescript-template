@@ -3,6 +3,8 @@ import Login from '../views/Login';
 import Layout from '../layout';
 import React from 'react';
 import { ROUTE_COMPONENT, ROUTE_KEY } from './meaus';
+import { Provider } from 'react-redux';
+import { store } from '@/store';
 
 interface IRoute {
     path: string;
@@ -27,17 +29,19 @@ export const getRouteByKey = (key: string) => ROUTE_CONFIG[key];
 
 const MyRouter = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/" element={<Layout />}>
-                    {routes.map((item) => {
-                        const Component = ROUTE_COMPONENT[item.key];
-                        return <Route path={item.path} key={item.path} element={<Component />} />;
-                    })}
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <Provider store={store}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/" element={<Layout />}>
+                        {routes.map((item) => {
+                            const Component = ROUTE_COMPONENT[item.key];
+                            return <Route path={item.path} key={item.path} element={<Component />} />;
+                        })}
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </Provider>
     );
 };
 
