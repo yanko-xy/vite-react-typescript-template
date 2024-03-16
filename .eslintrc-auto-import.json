@@ -40,6 +40,9 @@
     "useSyncExternalStore": true,
     "useTransition": true,
     "AntdButton": true,
-    "IconMdiAccountBox": true
+    "IconMdiAccountBox": true,
+    "useAppDispatch": true,
+    "useAppSelector": true,
+    "useTheme": true
   }
 }

@@ -23,6 +23,8 @@ declare global {
     const lazy: (typeof import('react'))['lazy'];
     const memo: (typeof import('react'))['memo'];
     const startTransition: (typeof import('react'))['startTransition'];
+    const useAppDispatch: (typeof import('../src/hooks/useAppDispatch'))['useAppDispatch'];
+    const useAppSelector: (typeof import('../src/hooks/useAppSelector'))['useAppSelector'];
     const useCallback: (typeof import('react'))['useCallback'];
     const useContext: (typeof import('react'))['useContext'];
     const useDebugValue: (typeof import('react'))['useDebugValue'];
@@ -50,5 +52,6 @@ declare global {
     const useState: (typeof import('react'))['useState'];
     const useSyncExternalStore: (typeof import('react'))['useSyncExternalStore'];
     const useTest: (typeof import('../src/hooks/demo'))['useTest'];
+    const useTheme: (typeof import('../src/hooks/useTheme'))['useTheme'];
     const useTransition: (typeof import('react'))['useTransition'];
 }
